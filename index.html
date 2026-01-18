@@ -3,23 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- 브라우저 탭 제목 -->
   <title>Tracking Migration in Latin America</title>
 
   <style>
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", Roboto, Arial, sans-serif;
-      background: #ffffff;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #fff;
       color: #111;
     }
 
     header {
       padding: 18px 22px;
       border-bottom: 1px solid #e6e6e6;
-      background: #ffffff;
+      background: #fff;
     }
 
     header h2 {
@@ -36,17 +33,23 @@
 
     .viz-wrap {
       width: 100%;
-      height: 85vh;
-      background: #f7f7f7;
+      height: min(82vh, 900px);
       border: 1px solid #e6e6e6;
       border-radius: 12px;
       overflow: hidden;
+      background: #fafafa;
+      position: relative;
     }
 
-    iframe {
+    /* Tableau placeholder가 박스 크기를 꽉 채우도록 */
+    .tableauPlaceholder {
       width: 100%;
       height: 100%;
-      border: 0;
+    }
+
+    .tableauPlaceholder object {
+      width: 100% !important;
+      height: 100% !important;
     }
 
     .note {
@@ -57,9 +60,7 @@
     }
 
     footer {
-      margin-top: 20px;
-      padding-top: 10px;
-      border-top: 1px solid #eee;
+      margin-top: 18px;
       font-size: 12px;
       color: #888;
       text-align: center;
@@ -68,34 +69,64 @@
 </head>
 
 <body>
-
-<!-- 상단 제목 -->
 <header>
   <h2>Tracking Migration in Latin America</h2>
 </header>
 
 <main>
 
-  <!-- Tableau Public 시각화 영역 -->
   <div class="viz-wrap">
-    <iframe
-      title="Tracking Migration Dashboard"
-      src="<div class='tableauPlaceholder' id='viz1768729707244' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;TrackingMigrationinLatinAmerica&#47;-&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TrackingMigrationinLatinAmerica&#47;-' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;TrackingMigrationinLatinAmerica&#47;-&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='ko-KR' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1768729707244');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1366px';vizElement.style.height='850px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1366px';vizElement.style.height='850px';} else { vizElement.style.width='100%';vizElement.style.height='1100px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>"
-      allowfullscreen>
-    </iframe>
+    <!-- ✅ Tableau Public 공식 Embed Code (너가 준 코드) -->
+    <div class="tableauPlaceholder" id="viz1768729707244" style="position:relative; width:100%; height:100%;">
+      <noscript>
+        <a href="#">
+          <img alt=" " src="https://public.tableau.com/static/images/Tr/TrackingMigrationinLatinAmerica/-/1_rss.png" style="border:none;" />
+        </a>
+      </noscript>
+
+      <object class="tableauViz" style="display:none;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="TrackingMigrationinLatinAmerica/-" />
+        <param name="tabs" value="yes" />
+        <param name="toolbar" value="yes" />
+        <param name="static_image" value="https://public.tableau.com/static/images/Tr/TrackingMigrationinLatinAmerica/-/1.png" />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="ko-KR" />
+      </object>
+    </div>
   </div>
 
-  <!-- 설명 텍스트 -->
   <div class="note">
-    지도에서 국가를 클릭하면 오른쪽 그래프가 해당 국가 기준으로 자동 갱신됩니다.<br>
-    연도 슬라이더를 사용해 시계열 변화를 확인할 수 있습니다.
+    지도에서 국가를 클릭하면 오른쪽 그래프가 해당 국가 기준으로 자동 갱신됩니다.
   </div>
 
   <footer>
-    Data Visualization powered by Tableau Public · Hosted on GitHub Pages
+    Hosted on GitHub Pages · Powered by Tableau Public
   </footer>
 
 </main>
+
+<script>
+  // ✅ 공식 스크립트 로딩 (너 코드 로직을 "반응형"으로만 정리)
+  (function () {
+    var divElement = document.getElementById('viz1768729707244');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+
+    // 박스(.viz-wrap) 크기에 맞춰 100%로 고정
+    vizElement.style.width = '100%';
+    vizElement.style.height = '100%';
+
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  })();
+</script>
 
 </body>
 </html>
