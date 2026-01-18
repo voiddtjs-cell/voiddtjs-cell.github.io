@@ -6,45 +6,45 @@
   <title>2024 Migration Dashboard</title>
   <style>
     :root { color-scheme: light; }
-    body {
-      margin: 0;
+    body{
+      margin:0;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #fff;
-      color: #111;
+      background:#fff;
+      color:#111;
     }
-    header {
-      padding: 18px 20px;
-      border-bottom: 1px solid #eee;
+    header{
+      padding:18px 20px;
+      border-bottom:1px solid #eee;
     }
-    header h2 { margin: 0; font-size: 28px; }
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px;
+    header h2{ margin:0; font-size:28px; }
+    main{
+      max-width:1200px;
+      margin:0 auto;
+      padding:16px;
     }
-    .viz-wrap {
-      width: 100%;
-      height: min(82vh, 900px);
-      border: 1px solid #eee;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #fafafa;
+    .viz-wrap{
+      width:100%;
+      height:min(82vh, 900px);
+      border:1px solid #eee;
+      border-radius:12px;
+      overflow:hidden;
+      background:#fafafa;
     }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
+    iframe{
+      width:100%;
+      height:100%;
+      border:0;
     }
-    .note {
-      color: #666;
-      font-size: 14px;
-      margin-top: 10px;
-      line-height: 1.4;
+    .note{
+      color:#666;
+      font-size:14px;
+      margin-top:10px;
+      line-height:1.4;
     }
-    .small {
-      color: #888;
-      font-size: 12px;
-      margin-top: 6px;
+    .small{
+      color:#888;
+      font-size:12px;
+      margin-top:6px;
     }
   </style>
 </head>
@@ -56,9 +56,15 @@
 
 <main>
   <div class="viz-wrap">
+    <!--
+      중요:
+      1) 아래 URL은 "views" 형식이어야 업데이트/특정 시트 고정이 안정적입니다.
+      2) Origin-Map 부분을 Tableau Public에서 실제로 보이는 시트/대시보드 경로로 바꾸세요.
+         (공유(Share) → Embed Code에서 나온 URL을 그대로 넣는 게 가장 확실)
+    -->
     <iframe
       title="Tableau Dashboard"
-      src="https://public.tableau.com/app/profile/sunjin.park/viz/TrackingMigrationinLatinAmerica/-?publish=yes"
+      src="https://public.tableau.com/views/TrackingMigrationinLatinAmerica/Origin-Map?:showVizHome=no&:embed=yes"
       loading="lazy"
       allowfullscreen
       referrerpolicy="no-referrer-when-downgrade">
@@ -69,7 +75,7 @@
     지도에서 국가를 클릭하면 오른쪽 그래프가 해당 국가 기준으로 갱신됩니다.
   </div>
   <div class="small">
-    * 대시보드가 안 뜨면: Tableau Public에서 ‘공개(Public)’로 게시됐는지 확인하고, 새로고침(Ctrl+F5) 해보세요.
+    * 화면이 예전 버전처럼 보이면: Ctrl+F5로 강력 새로고침을 하세요. (게시물은 Tableau Public에 “덮어쓰기”로 다시 게시해야 반영됩니다.)
   </div>
 </main>
 
