@@ -3,77 +3,97 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2024 Migration Dashboard</title>
+
+  <!-- 브라우저 탭 제목 -->
+  <title>Tracking Migration in Latin America</title>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, Arial, sans-serif;
       background: #ffffff;
       color: #111;
     }
 
     header {
-      padding: 16px 20px;
-      border-bottom: 1px solid #e5e5e5;
+      padding: 18px 22px;
+      border-bottom: 1px solid #e6e6e6;
+      background: #ffffff;
     }
 
     header h2 {
       margin: 0;
-      font-size: 26px;
+      font-size: 28px;
+      font-weight: 600;
     }
 
     main {
-      max-width: 1200px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 16px;
+      padding: 18px;
     }
 
     .viz-wrap {
       width: 100%;
       height: 85vh;
-      border: 1px solid #e5e5e5;
-      border-radius: 10px;
+      background: #f7f7f7;
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
       overflow: hidden;
-      background: #fafafa;
     }
 
     iframe {
       width: 100%;
       height: 100%;
-      border: none;
+      border: 0;
     }
 
     .note {
-      margin-top: 10px;
+      margin-top: 12px;
       font-size: 14px;
-      color: #666;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+      font-size: 12px;
+      color: #888;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
 
+<!-- 상단 제목 -->
 <header>
-  <h2>2024 Migration Dashboard</h2>
+  <h2>Tracking Migration in Latin America</h2>
 </header>
 
 <main>
 
+  <!-- Tableau Public 시각화 영역 -->
   <div class="viz-wrap">
-   <iframe
-  src="https://public.tableau.com/views/TrackingMigrationinLatinAmerica/Dashboard1?:showVizHome=no&:embed=yes"
-  width="100%"
-  height="100%"
-  frameborder="0"
-  allowfullscreen>
-</iframe>
-
+    <iframe
+      title="Tracking Migration Dashboard"
+      src="https://public.tableau.com/views/TrackingMigrationinLatinAmerica/Dashboard1?:showVizHome=no"
+      allowfullscreen>
+    </iframe>
   </div>
 
+  <!-- 설명 텍스트 -->
   <div class="note">
-    지도에서 국가를 클릭하면 오른쪽 그래프가 자동으로 갱신됩니다.
+    지도에서 국가를 클릭하면 오른쪽 그래프가 해당 국가 기준으로 자동 갱신됩니다.<br>
+    연도 슬라이더를 사용해 시계열 변화를 확인할 수 있습니다.
   </div>
+
+  <footer>
+    Data Visualization powered by Tableau Public · Hosted on GitHub Pages
+  </footer>
 
 </main>
 
